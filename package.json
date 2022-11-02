@@ -4,6 +4,9 @@
   "description": "",
   "main": "main.js",
   "scripts": {
+    "html": "copyfiles -u 1 public/*.html dist",
+    "dev": "webpack serve --mode production",
+    "build": "npm run html && webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +17,7 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
+    "copyfiles": "^2.4.1",
     "webpack": "^5.74.0",
     "webpack-dev-server": "^4.11.1"
   }
