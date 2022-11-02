@@ -9,7 +9,17 @@
             body {
                 height: 100%;
             }
+            body {
+                padding: 50px;
+            }
+            .wrapper {
+                position: relative;
+                overflow: hidden;
+                height: 100%;
+                border:  1px solid rebeccapurple;
+            }
             .el {
+                pointer-events: none;
                 position: absolute;
                 border-radius: 50%;
                 background-color: rebeccapurple;
@@ -19,9 +29,12 @@
                 align-items: center;
                 justify-content: center;
                 user-select: none;
+                will-change: "width, height";
             }
         </style>
     </head>
-    <body></body>
+    <body>
+        <div class="wrapper"></div>
+    </body>
     <script src="main.js"></script>
 </html>
